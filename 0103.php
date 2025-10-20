@@ -11,12 +11,12 @@
 <h3>Slett Klasse</h3>
 
 <form method="post" action="" id="slettKlassekodeSkjema" name="slettKlassekodeSkjema" onSubmit="return bekreft()">
-  Klassenavn <input type="text" id="Klassenavn" name="Klassenavn" required /> <br/>
-  <input type="submit" value="Slett Klassekode" name="slettKlassekodeKnapp" id="slettKlassekodeKnapp" /> 
+  Klassenavn <input type="text" id="Klassekode" name="Klassekode" required /> <br/>
+  <input type="submit" value="Slett Klassenavn" name="slettKlassenavnKnapp" id="slettKlassenavnKnapp" /> 
 </form>
 
 <?php
-  if (isset($_POST ["slettKlassenavnKnapp"]))
+  if (isset($_POST ["slettKlassekodeKnapp"]))
     {	
       $Klassenavn=$_POST ["Klassenavn"];
 	  
