@@ -18,9 +18,9 @@
 <?php 
   if (isset($_POST ["registrerKlasseKnapp"]))
     {
-      $klassekode=$_POST ["klassekode"];
       $klassenavn=$_POST ["klassenavn"];
       $studiumkode=$_POST ["studiumkode"];
+      $klassekode=$_POST ["klassekode"];
 
       if (!$klassekode || !$klassenavn || !$studiumkode)
         {
