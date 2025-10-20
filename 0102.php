@@ -23,7 +23,7 @@
       $klassekode=$rad["klassekode"];    /* ELLER $Klassekode=$rad[1]; */
       $studiumkode=$rad["studiumkode"]; /* ELLER $Studiumkode=$rad [2]; */
 
-      print ("<tr> <td> $klassenavn </td> <td> $klassekode </td> <td> $ktudiumkode </td> </tr>");
+      print ("<tr> <td> $klassenavn </td> <td> $klassekode </td> <td> $studiumkode </td> </tr>");
     }
   print ("</table>"); 
 ?>
