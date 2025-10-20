@@ -28,17 +28,17 @@
         {
           include("db-tilkobling.php");  /* tilkobling til database-serveren utført og valg av database foretatt */
 
-          $sqlSetning="SELECT * FROM Klassekode WHERE Klassenavn='$Klassenavn';";
+          $sqlSetning="SELECT * FROM Klassenavn WHERE Klassekode='$Klassenavn';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
           $antallRader=mysqli_num_rows($sqlResultat); 
 
           if ($antallRader==0)  /* Klassekode er ikke registrert */
             {
-              print ("Klassekode finnes ikke");
+              print ("Klassenavn finnes ikke");
             }
           else
             {	  
-              $sqlSetning="DELETE FROM Klassekode WHERE Klassenavn='$Klassenavn';";
+              $sqlSetning="DELETE FROM Klassenavn WHERE Klassekode='$Klassenavn';";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
                 /* SQL-setning sendt til database-serveren */
 		
