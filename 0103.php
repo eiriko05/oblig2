@@ -16,7 +16,7 @@
 </form>
 
 <?php
-  if (isset($_POST ["slettKlassekodeKnapp"]))
+  if (isset($_POST ["slettKlassenavnKnapp"]))
     {	
       $Klassenavn=$_POST ["Klassenavn"];
 	  
