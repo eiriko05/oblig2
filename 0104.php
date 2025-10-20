@@ -9,9 +9,9 @@
 
 <form method="post" action="" id="registrerStudentSkjema" name="registrerStudentSkjema">
   Klassekode <input type="text" id="Klassekode" name="Klassekode" required /> <br/>
-  brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
-  etternavn <input type="text" id="etternavn" name="etternavn" required/> <br/>
-  fornavn <input type="text" id="fornavn" name="fornavn" required/> <br/>
+  Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
+  Etternavn <input type="text" id="etternavn" name="etternavn" required/> <br/>
+  Fornavn <input type="text" id="fornavn" name="fornavn" required/> <br/>
   <input type="submit" value="Registrer Student" id="registrerStudentkodeKnapp" name="registrerStudentkodeKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
