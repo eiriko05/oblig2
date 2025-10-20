@@ -9,8 +9,8 @@
 
 <form method="post" action="" id="registrerKlasseSkjema" name="registrerKlasseSkjema">
   Klassenavn <input type="text" id="klassenavn" name="klassenavn" required /> <br/>
-   Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
   Studiumkode <input type="text" id="studiumkode" name="studiumkode" required/> <br/>
+  Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
   <input type="submit" value="Registrer Klasse" id="registrerKlasseKnapp" name="registrerKlasseKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
@@ -40,11 +40,11 @@
             }
           else
             {
-              $sqlSetning="INSERT INTO Klasse VALUES('$klassenavn','$klassekode','$studiumkode');";
+              $sqlSetning="INSERT INTO Klasse VALUES('$klassenavn','$studiumkode','$klassekode');";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
-              print ("F&oslash;lgende Klasse er n&aring; registrert: $klassenavn $klassekode $studiumkode"); 
+              print ("F&oslash;lgende Klasse er n&aring; registrert: $klassenavn $studiumkode $klassekode"); 
             }
         }
     }
