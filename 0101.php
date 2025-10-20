@@ -40,7 +40,7 @@
             }
           else
             {
-              $sqlSetning="INSERT INTO Klassekode VALUES('$klassekode','$klassenavn');";
+              $sqlSetning="INSERT INTO Klassekode VALUES('$Klassekode','$Klassenavn');";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
