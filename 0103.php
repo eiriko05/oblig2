@@ -34,7 +34,7 @@
 
           if ($antallRader==0)  /* Klassekode er ikke registrert */
             {
-              print ("Poststedet finnes ikke");
+              print ("Klassekode finnes ikke");
             }
           else
             {	  
