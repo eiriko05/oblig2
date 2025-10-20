@@ -5,7 +5,7 @@
 */
   include("db-tilkobling.php");  /* tilkobling til database-serveren utf�rt og valg av database foretatt */
 
-  $sqlSetning="SELECT * FROM Klassekode;";
+  $sqlSetning="SELECT * FROM klassekode;";
   
   $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
     /* SQL-setning sendt til database-serveren */
@@ -14,16 +14,16 @@
 
   print ("<h3>Registrerte Klasser</h3>");
   print ("<table border=1s>");  
-  print ("<tr><th align=left>Klassenavn</th> <th align=left>Klassekode</th> <th align=left>Studiumkode</th> </tr>"); 
+  print ("<tr><th align=left>klassenavn</th> <th align=left>klassekode</th> <th align=left>studiumkode</th> </tr>"); 
 
   for ($r=1;$r<=$antallRader;$r++)
     {
       $rad=mysqli_fetch_array($sqlResultat);  /* ny rad hentet fra sp�rringsresultatet */
-      $Klassenavn=$rad["Klassenavn"];        /* ELLER $Klassenavn=$rad[0]; */
-      $Klassekode=$rad["Klassekode"];    /* ELLER $Klassekode=$rad[1]; */
-      $Studiumkode=$rad["Studiumkode"]; /* ELLER $Studiumkode=$rad [2]; */
+      $klassenavn=$rad["klassenavn"];        /* ELLER $Klassenavn=$rad[0]; */
+      $klassekode=$rad["klassekode"];    /* ELLER $Klassekode=$rad[1]; */
+      $studiumkode=$rad["studiumkode"]; /* ELLER $Studiumkode=$rad [2]; */
 
-      print ("<tr> <td> $Klassenavn </td> <td> $Klassekode </td> <td> $Studiumkode </td> </tr>");
+      print ("<tr> <td> $klassenavn </td> <td> $klassekode </td> <td> $ktudiumkode </td> </tr>");
     }
   print ("</table>"); 
 ?>
