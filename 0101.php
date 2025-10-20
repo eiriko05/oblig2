@@ -40,11 +40,11 @@
             }
           else
             {
-              $sqlSetning="INSERT INTO Klassekode VALUES('$Klassekode','$Kalassenavn' 'Studiumkode');";
+              $sqlSetning="INSERT INTO Klassekode VALUES('$Klassekode','$Kalassenavn','Studiumkode');";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
-              print ("F&oslash;lgende poststed er n&aring; registrert: $Klassenavn $Klassekode $Studiumkode"); 
+              print ("F&oslash;lgende Klassekode er n&aring; registrert: $Klassenavn $Klassekode $Studiumkode"); 
             }
         }
     }
