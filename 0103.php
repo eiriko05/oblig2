@@ -8,7 +8,7 @@
 
 <script src="funksjoner.js"> </script>
 
-<h3>Slett Klasse</h3>
+<h3>Slett Klassenavn</h3>
 
 <form method="post" action="" id="slettKlassekodeSkjema" name="slettKlassekodeSkjema" onSubmit="return bekreft()">
   Klassenavn <input type="text" id="Klassekode" name="Klassekode" required /> <br/>
