@@ -31,8 +31,8 @@
           include("db-tilkobling.php");  /* tilkobling til database-serveren utført og valg av database foretatt */
 
           $sqlSetning="SELECT * FROM Klassekode WHERE Klassenavn='$Klassenavn';";
-          $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
-          $antallRader=mysqli_num_rows($sqlResultat); 
+          $sqlResultat=mysql_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
+          $antallRader=mysql_num_rows($sqlResultat); 
 
           if ($antallRader!=0)  /* Klassekode er registrert fra før */
             {
