@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Programmering</title>
+<body>
+       PRG120V
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Oppgaveoversikt</title>
+</head>
+<body>
+<h1>Oppgaveoversikt</h1>
+
+
+<h2>Brukerfunksjoner </h2>
+<ul>
+<li><a href="Registrer klasse.html"></a></li>
+<li><a href="Vis alle klasser"></a></li>
+<li><a href="Slett klasse"></a></li>
+<li><a href="Registrer student"></a></li>
+<li><a href="Vis alle studenter"></a></li>
+<li><a href="Slett student"></a></li>
+</ul>
+</body>
+</html>
