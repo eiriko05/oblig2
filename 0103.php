@@ -42,7 +42,7 @@
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
                 /* SQL-setning sendt til database-serveren */
 		
-              print ("F&oslash;lgende Klasse er n&aring; slettet: $klasse <br />");
+              print ("F&oslash;lgende Klasse er n&aring; slettet: $Klasse <br />");
             }
         }
     }
