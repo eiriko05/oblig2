@@ -14,7 +14,7 @@
 
   print ("<h3>Registrerte Klasser</h3>");
   print ("<table border=1s>");  
-  print ("<tr><th align=left>klassenavn</th> <th align=left>klassekode</th> <th align=left>studiumkode</th> </tr>"); 
+  print ("<tr><th align=left>klassenavn</th> <th align=left>studiumkode</th> <th align=left>klassekode</th> </tr>"); 
 
   for ($r=1;$r<=$antallRader;$r++)
     {
