@@ -27,6 +27,10 @@ if (isset($_POST["registrerStudentKnapp"])) {
     print("B&aring;de Klassekode, brukernavn, etternavn og fornavn m&aring; fylles ut");
   } else {
     include("db-tilkobling.php"); // må definere $kobling her
+     $sqlSetning="SELECT * FROM Student WHERE klassekode='$klassekode';";
+          $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
+          $antallRader=mysqli_num_rows($sqlResultat); 
+
 
     $sql = "INSERT INTO Student (brukernavn,fornavn,etternavn,klassekode)
             VALUES ('$brukernavn','$fornavn','$etternavn','$klassekode')";
