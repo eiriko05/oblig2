@@ -31,11 +31,18 @@ if (isset($_POST["registrerStudentKnapp"])) {
     $sql = "INSERT INTO Student (brukernavn,fornavn,etternavn,klassekode)
             VALUES ('$brukernavn','$fornavn','$etternavn','$klassekode')";
 
-    if (mysqli_query($kobling, $sql)) {
-      print("Student er registrert");
-    } else {
-      print("Feil ved registrering:" . mysqli_error($kobling));
+     if ($antallRader!=0)  /* Student er registrert fra før */
+            {
+              print ("student er registrert fra f&oslashr");
+            }
+          else
+            {
+              $sqlSetning="INSERT INTO Student VALUES('$fornavn','$etternavn','$brukernavn',$klassekode,');";
+              mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
+                /* SQL-setning sendt til database-serveren */
+
+              print ("F&oslash;lgende Student er n&aring; registrert: $fornavn $etternavn $brukernavn $klassekode"); 
+            }
+        }
     }
-  }
-}
-?>
+?> 
