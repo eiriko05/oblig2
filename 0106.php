@@ -11,16 +11,19 @@
 
 <form method="post" action="" id="slettbrukernavnSkjema" name="slettbrukernavnSkjema" onSubmit="return bekreft()">
   Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
-  <input type="submit" value="Slett Klasse" name="slettKlasseKnapp" id="slettKlasseKnapp" /> 
+  <input type="submit" value="Slett Student" name="slettStudentKnapp" id="slettStudentKnapp" /> 
 </form>
 
 <?php
-if (isset($_POST["slettStudentKnapp"])) {
+if (isset($_POST["slettStudentKnapp"])) 
+ {
     $brukernavn = $_POST["brukernavn"];
 
-    if (!$brukernavn) {
+    if (!$brukernavn) 
+{
         print("Student må fylles ut");
-    } else {
+} else 
+{
         include("db-tilkobling.php");  // kobler til databasen
 
         // sjekk om Studenten finnes
@@ -28,15 +31,17 @@ if (isset($_POST["slettStudentKnapp"])) {
         $sqlResultat = mysqli_query($db, $sqlSetning) or die("Ikke mulig å hente data fra databasen");
         $antallRader = mysqli_num_rows($sqlResultat);
 
-        if ($antallRader == 0) {
+        if ($antallRader == 0) 
+        {
             print("Student finnes ikke");
-        } else {
+        } else 
+        {
             // slett Klassen
             $sqlSetning = "DELETE FROM Student WHERE brukernavn='$brukernavn';";
             mysqli_query($db, $sqlSetning) or die("Ikke mulig å slette data i databasen");
 
             print("Følgende Student er nå slettet: $klassekode <br />");
         }
-    }
 }
+ }
 ?>
