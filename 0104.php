@@ -17,18 +17,19 @@
 </form>
 
 <?php
-if (isset($_POST["registrerStudentKnapp"])) {
+if (isset($_POST["registrerStudentKnapp"])) 
+{
   $fornavn=$_POST["fornavn"];
   $etternavn=$_POST["etternavn"];
   $brukernavn=$_POST["brukernavn"];
   $klassekode=$_POST["klassekode"];
 
   if (!$fornavn || !$etternavn || !$brukernavn || !$klassekode) 
-    {
+  {
     print("B&aring;de brukernavn, etternavn, brukernavn og klassekode m&aring; fylles ut");
-    } 
+  } 
   else 
-    {
+  {
     include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
      
     $sqlSetning="SELECT * FROM Student WHERE brukernavn='$brukernavn';";
@@ -51,6 +52,6 @@ if (isset($_POST["registrerStudentKnapp"])) {
 
               print ("F&oslash;lgende Student er n&aring; registrert: $fornavn $etternavn $brukernavn $klassekode"); 
             }
-     }
+   }
   }
 ?> 
