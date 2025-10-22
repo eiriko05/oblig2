@@ -24,7 +24,7 @@ if (isset($_POST["registrerStudentKnapp"])) {
   $klassekode=$_POST["klassekode"];
 
   if (!$fornavn || !$etternavn || !$brukernavn || !$klassekode) {
-    print("B&aring;de Klassekode, brukernavn, etternavn og fornavn m&aring; fylles ut");
+    print("B&aring;de brukernavn, etternavn, brukernavn og klassekode m&aring; fylles ut");
   } else {
     include("db-tilkobling.php"); // må definere $kobling her
      $sqlSetning="SELECT * FROM Student WHERE klassekode='$klassekode';";
@@ -37,7 +37,7 @@ if (isset($_POST["registrerStudentKnapp"])) {
 
      if ($antallRader!=0)  /* Student er registrert fra før */
             {
-              print ("student er registrert fra f&oslashr");
+              print ("Student er registrert fra f&oslashr");
             }
           else
             {
