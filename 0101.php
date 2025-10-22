@@ -40,11 +40,11 @@ studiumkode <input type="text" id="studiumkode" name="studiumkode" required /> <
             }
           else
             {
-              $sqlSetning="INSERT INTO Klasse VALUES('$klassenavn','$stadiumkode', '$klassekode');";
+              $sqlSetning="INSERT INTO Klasse VALUES('$klassenavn','$studiumkode', '$klassekode');";
               mysqli_query($db, $sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
-              print ("F&oslash;lgende Klasse er n&aring; registrert: $klassenavn $stadiumkode $klassekodes");
+              print ("F&oslash;lgende Klasse er n&aring; registrert: $klassenavn $studiumkode $klassekodes");
             }
         }
     }
