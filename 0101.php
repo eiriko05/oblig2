@@ -2,7 +2,7 @@
 /* registrer-Klasse
    Programmet lager et skjema for å registrere en Klasse
    Klassenavn og studiumkode skrives inn manuelt,
-   mens klassekode velges fra en dynamisk listeboks
+   mens klassekode velges fra en dynamisk listeboks (fra tabellen Klassekoder)
 */
 ?>
 
@@ -11,8 +11,8 @@
 <?php
 include("db-tilkobling.php");  // kobler til databasen
 
-// hent alle tilgjengelige klassekoder dynamisk
-$sqlSetning = "SELECT klassekode FROM Klasse ORDER BY klassekode;";
+// hent alle gyldige klassekoder fra Klassekoder-tabellen
+$sqlSetning = "SELECT klassekode FROM Klassekoder ORDER BY klassekode;";
 $sqlResultat = mysqli_query($db, $sqlSetning) or die("Ikke mulig å hente klassekoder");
 ?>
 
