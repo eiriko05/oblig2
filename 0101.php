@@ -8,9 +8,9 @@
 <h3>Registrer klasse </h3>
 
 <form method="post" action="" id="registrerklasseSkjema" name="registrerklasseSkjema">
-  klassenavn <input type="text" id="klassenavn" name="klassenavn" required /> <br/>
-  studiumkode <input type="text" id="studiumkode" name="studiumkode" required /> <br/>
-  klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
+klassenavn <input type="text" id="klassenavn" name="klassenavn" required /> <br/>
+studiumkode <input type="text" id="studiumkode" name="studiumkode" required /> <br/>
+klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
   <input type="submit" value="Registrer klassekode" id="registrerKlassekodeKnapp" name="registrerKlassekodeKnapp" />
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
