@@ -18,12 +18,12 @@
 
 <?php
 if (isset($_POST["registrerStudentKnapp"])) {
-  $klassekode = $_POST["klassekode"];
-  $brukernavn = $_POST["brukernavn"];
-  $etternavn = $_POST["etternavn"];
-  $fornavn = $_POST["fornavn"];
+  $fornavn=$_POST["klassekode"];
+  $etternavn=$_POST["brukernavn"];
+  $brukernavn=$_POST["etternavn"];
+  $klassekode=$_POST["fornavn"];
 
-  if (!$klassekode || !$brukernavn || !$etternavn || !$fornavn) {
+  if (!$fornavn || !$etternavn || !$brukernavn || !$klassekode) {
     print("B&aring;de Klassekode, brukernavn, etternavn og fornavn m&aring; fylles ut");
   } else {
     include("db-tilkobling.php"); // må definere $kobling her
