@@ -26,7 +26,7 @@ if (isset($_POST["registrerStudentKnapp"]))
 
   if (!$fornavn || !$etternavn || !$brukernavn || !$klassekode) 
   {
-    print("B&aring;de brukernavn, etternavn, brukernavn og klassekode m&aring; fylles ut");
+    print("B&aring;de fornavn, etternavn, brukernavn og klassekode m&aring; fylles ut");
   } 
   else 
   {
