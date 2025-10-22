@@ -26,7 +26,7 @@ if (isset($_POST["registrerStudentKnapp"])) {
   if (!$fornavn || !$etternavn || !$brukernavn || !$klassekode) {
     print("B&aring;de brukernavn, etternavn, brukernavn og klassekode m&aring; fylles ut");
   } else {
-    include("db-tilkobling.php"); // må definere $kobling her
+    include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
      $sqlSetning="SELECT * FROM Student WHERE klassekode='$klassekode';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
           $antallRader=mysqli_num_rows($sqlResultat); 
