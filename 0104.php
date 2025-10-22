@@ -60,7 +60,7 @@ if (isset($_POST["registrerStudentKnapp"])) {
                            VALUES ('$fornavn','$etternavn','$brukernavn','$klassekode');";
             mysqli_query($db, $sqlSetning) or die("Ikke mulig å registrere data i databasen");
 
-            print("Følgende student er nå registrert: $fornavn $etternavn ($brukernavn) i klasse $klassekode");
+            psrint("Følgende student er nå registrert: $fornavn $etternavn ($brukernavn) i klasse $klassekode");
         }
     }
 }
