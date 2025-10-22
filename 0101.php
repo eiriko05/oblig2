@@ -12,7 +12,7 @@
 include("db-tilkobling.php");  // kobler til databasen
 
 // hent alle gyldige klassekodr fra en egen tabell (Klassekoder)
-$sqlSetning = "SELECT klassekode FROM Klassekode ORDER BY klassekode;";
+$sqlSetning = "SELECT klassekode FROM klassekode ORDER BY klassekode;";
 $sqlResultat = mysqli_query($db, $sqlSetning) or die("Ikke mulig å hente klassekoder");
 ?>
 
