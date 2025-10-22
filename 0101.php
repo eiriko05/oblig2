@@ -30,7 +30,7 @@
         {
           include("db-tilkobling.php");  /* tilkobling til database-serveren utført og valg av database foretatt */
 
-          $sqlSetning="SELECT * FROM klassekode WHERE klassekode='$klassekode';";
+          $sqlSetning="SELECT * FROM Klasse WHERE klassekode='$klassekode';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
           $antallRader=mysqli_num_rows($sqlResultat);
 
@@ -40,7 +40,7 @@
             }
           else
             {
-              $sqlSetning="INSERT INTO klassekode VALUES('$klassekode','$klassenavn', '$studiumkode');";
+              $sqlSetning="INSERT INTO Klasse VALUES('$klassekode','$klassenavn', '$studiumkode');";
               mysqli_query($db, $sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
