@@ -16,9 +16,9 @@ $sqlResultat = mysqli_query($db, $sqlSetning) or die("Ikke mulig å hente klasse
 ?>
 
 <form method="post" action="" id="registrerStudentSkjema" name="registrerStudentSkjema">
-  Fornavn: <input type="text" id="fornavn" name="fornavn" required /> <br/>
-  Etternavn: <input type="text" id="etternavn" name="etternavn" required /> <br/>
-  Brukernavn: <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
+  Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
+  Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
+  Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
 
   <label for="klassekode">Velg klassekode:</label>
   <select id="klassekode" name="klassekode" required>
