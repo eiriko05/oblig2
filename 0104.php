@@ -23,9 +23,12 @@ if (isset($_POST["registrerStudentKnapp"])) {
   $brukernavn=$_POST["brukernavn"];
   $klassekode=$_POST["klassekode"];
 
-  if (!$fornavn || !$etternavn || !$brukernavn || !$klassekode) {
+  if (!$fornavn || !$etternavn || !$brukernavn || !$klassekode) 
+    {
     print("B&aring;de brukernavn, etternavn, brukernavn og klassekode m&aring; fylles ut");
-  } else {
+    } 
+  else 
+    {
     include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
      
     $sqlSetning="SELECT * FROM Student WHERE brukernavn='$brukernavn';";
@@ -33,20 +36,21 @@ if (isset($_POST["registrerStudentKnapp"])) {
           $antallRader=mysqli_num_rows($sqlResultat); 
 
 
-    $sql = "INSERT INTO Student (brukernavn,fornavn,etternavn,klassekode)
-            VALUES ('$brukernavn','$fornavn','$etternavn','$klassekode')";
-            mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
-                /* SQL-setning sendt til database-serveren */
+    
 
      if ($antallRader!=0)  /* Student er registrert fra før */
             {
               print ("Student er registrert fra f&oslashr");
             }
           else
+             $sql = "INSERT INTO Student (brukernavn,fornavn,etternavn,klassekode)
+            VALUES ('$brukernavn','$fornavn','$etternavn','$klassekode')";
+            mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
+                /* SQL-setning sendt til database-serveren */
             {
 
               print ("F&oslash;lgende Student er n&aring; registrert: $fornavn $etternavn $brukernavn $klassekode"); 
             }
-        }
-    }
+     }
+  }
 ?> 
