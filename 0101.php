@@ -61,7 +61,7 @@ if (isset($_POST["registrerStudentKnapp"])) {
             mysqli_query($db, $sqlSetning) or die("Ikke mulig å registrere data i databasen");
 
             print("Student $fornavn $etternavn ($brukernavn) er nå registrert i klasse $klassekode");
-        }
+        } 
     }
 }
 ?>
