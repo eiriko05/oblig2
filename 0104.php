@@ -50,7 +50,7 @@ if (isset($_POST["registrerStudentKnapp"]))
                 /* SQL-setning sendt til database-serveren */
             
 
-              print ("F&oslash;lgende Student er n&aring; registrert: $fornavn $etternavn $brukernavn $klassekode"); 
+             print ("F&oslash;lgende Student er n&aring; registrert: $fornavn $etternavn $brukernavn $klassekode"); 
             }
    }
   }
