@@ -31,6 +31,12 @@ if (isset($_POST["registrerStudentKnapp"])) {
     $sqlSetning="SELECT * FROM Student WHERE brukernavn='$brukernavn';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
           $antallRader=mysqli_num_rows($sqlResultat); 
+          
+          $sqlSjekkKlasse = "SELECT * FROM Klasse WHERE klassekode='$klassekode'";
+$resultatKlasse = mysqli_query($db, $sqlSjekkKlasse);
+if (mysqli_num_rows($resultatKlasse) == 0) {
+  die("Ugyldig klassekode: $klassekode finnes ikke i Klasse-tabellen");
+}
 
 
     $sql = "INSERT INTO Student (brukernavn,fornavn,etternavn,klassekode)
