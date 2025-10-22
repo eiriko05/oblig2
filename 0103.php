@@ -38,7 +38,7 @@
             }
           else
             {	  
-              $sqlSetning="DELETE FROM Klasse WHERE klassekode='$klassenavn';";
+              $sqlSetning="DELETE FROM Klasse WHERE klassenavn='$klassenavn';";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
                 /* SQL-setning sendt til database-serveren */
 		
