@@ -21,7 +21,7 @@
       $rad=mysqli_fetch_array($sqlResultat);  /* ny rad hentet fra sp�rringsresultatet */
       $fornavn=$rad["fornavn"];        /* ELLER $Fornavn=$rad[0]; */
       $etternavn=$rad["etternavn"]; /* ELLER $Etternavn=$rad [1]; */
-      $brukernavn=$rad[" brukernavn"];    /* ELLER $Brukernavn=$rad[2]; */
+      $brukernavn=$rad["brukernavn"];    /* ELLER $Brukernavn=$rad[2]; */
       $klassekode=$rad["klassekode"];      /*ELLER $Klassekode=$rad[3] */
       print ("<tr> <td> $fornavn </td> <td> $etternavn </td> <td> $brukernavn <td> $klassekode <td> </td> </tr>");
     }
