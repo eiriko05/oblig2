@@ -1,7 +1,7 @@
 <?php  
 /* registrer-Student
    Programmet lager et skjema for å registrere en Student
-   Studenten knyttes til en eksisterende klasse via en dynamisk listeboks
+   Studenten knyttes til en eksisterende klasse via en dynamisk listeboks (kun klassekode)
 */
 ?>
 
@@ -10,9 +10,9 @@
 <?php
 include("db-tilkobling.php");  // kobler til databasen
 
-// hent alle klasser dynamisk
-$sqlSetning = "SELECT klassekode, klassenavn FROM Klasse ORDER BY klassekode;";
-$sqlResultat = mysqli_query($db, $sqlSetning) or die("Ikke mulig å hente klasser");
+// hent alle klassekoder dynamisk
+$sqlSetning = "SELECT klassekode FROM Klasse ORDER BY klassekode;";
+$sqlResultat = mysqli_query($db, $sqlSetning) or die("Ikke mulig å hente klassekoder");
 ?>
 
 <form method="post" action="" id="registrerStudentSkjema" name="registrerStudentSkjema">
@@ -22,12 +22,11 @@ $sqlResultat = mysqli_query($db, $sqlSetning) or die("Ikke mulig å hente klasse
 
   <label for="klassekode">Velg klassekode:</label>
   <select id="klassekode" name="klassekode" required>
-    <option value="">-- Velg klasse --</option>
+    <option value="">-- Velg klassekode --</option>
     <?php
     while ($rad = mysqli_fetch_assoc($sqlResultat)) {
         $kode = $rad['klassekode'];
-        $navn = $rad['klassenavn'];
-        echo "<option value='$kode'>$kode – $navn</option>";
+        echo "<option value='$kode'>$kode</option>";
     }
     ?>
   </select>
@@ -60,7 +59,7 @@ if (isset($_POST["registrerStudentKnapp"])) {
                            VALUES ('$fornavn','$etternavn','$brukernavn','$klassekode');";
             mysqli_query($db, $sqlSetning) or die("Ikke mulig å registrere data i databasen");
 
-            print("Følgende student er nå registrert: $fornavn $etternavn ($brukernavn) i klasse $klassekode");
+            print("Følgende student er nå registrert: $fornavn $etternavn ($brukernavn) i klassekode $klassekode");
         }
     }
 }
