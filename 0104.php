@@ -18,16 +18,24 @@
 
 <?php
 if (isset($_POST["registrerStudentKnapp"])) {
-  $Klassekode=$_POST["Klassekode"];
-  $brukernavn=$_POST["brukernavn"];
-  $etternavn=$_POST["etternavn"];
-  $fornavn=$_POST["fornavn"];
+  $Klassekode = $_POST["Klassekode"];
+  $brukernavn = $_POST["brukernavn"];
+  $etternavn = $_POST["etternavn"];
+  $fornavn = $_POST["fornavn"];
 
   if (!$Klassekode || !$brukernavn || !$etternavn || !$fornavn) {
-    print ("B&aring;de Klassekode, brukernavn, etternavn og fornavn m&aring; fylles ut");
+    print("B&aring;de Klassekode, brukernavn, etternavn og fornavn m&aring; fylles ut");
   } else {
-    include("db-tilkobling.php");
-print("Student er registrert");
+    include("db-tilkobling.php"); // må definere $kobling her
+
+    $sql = "INSERT INTO Student (brukernavn, fornavn, etternavn, klassekode)
+            VALUES ('$brukernavn', '$fornavn', '$etternavn', '$Klassekode')";
+
+    if (mysqli_query($kobling, $sql)) {
+      print("Student er registrert");
+    } else {
+      print("Feil ved registrering: " . mysqli_error($kobling));
+    }
   }
 }
 ?>
