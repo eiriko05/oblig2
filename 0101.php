@@ -24,7 +24,7 @@
 
       if (!$klassekode || !$klassenavn || !$studiumkode)
         {
-          print ("B&aring;de klassekode klassenavn og studiumkode m&aring; fylles ut");
+          print ("B&aring;de klassenavn studiumkode og klassekode m&aring; fylles ut");
         }
       else
         {
@@ -44,7 +44,7 @@
               mysqli_query($db, $sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
-              print ("F&oslash;lgende klassenavn er n&aring; registrert: $klassenavn $stadiumkode $klassekode");
+              print ("F&oslash;lgende Klasse er n&aring; registrert: $klassenavn $stadiumkode $klassekodes");
             }
         }
     }
