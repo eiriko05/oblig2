@@ -18,10 +18,10 @@
 
 <?php
 if (isset($_POST["registrerStudentKnapp"])) {
-  $Klassekode = $_POST["Klassekode"];
-  $brukernavn = $_POST["brukernavn"];
-  $etternavn = $_POST["etternavn"];
-  $fornavn = $_POST["fornavn"];
+  $Klassekode=$_POST["Klassekode"];
+  $brukernavn=$_POST["brukernavn"];
+  $etternavn=$_POST["etternavn"];
+  $fornavn=$_POST["fornavn"];
 
   if (!$Klassekode || !$brukernavn || !$etternavn || !$fornavn) {
     print ("B&aring;de Klassekode, brukernavn, etternavn og fornavn m&aring; fylles ut");
@@ -30,4 +30,3 @@ if (isset($_POST["registrerStudentKnapp"])) {
     }
     }
     ?>
-    
