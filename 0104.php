@@ -44,10 +44,11 @@ if (isset($_POST["registrerStudentKnapp"]))
               print ("Student er registrert fra f&oslashr");
             }
           else
-             $sqlSetning = "INSERT INTO Student VALUES ('$fornavn','$etternavn','$brukernavn','$klassekode');";
-            mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
-                /* SQL-setning sendt til database-serveren */
             {
+             $sqlSetning = "INSERT INTO Student VALUES ('$fornavn','$etternavn','$brukernavn','$klassekode');";
+            mysqli_query($db, $sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
+                /* SQL-setning sendt til database-serveren */
+            
 
               print ("F&oslash;lgende Student er n&aring; registrert: $fornavn $etternavn $brukernavn $klassekode"); 
             }
