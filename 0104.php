@@ -26,4 +26,4 @@ if (isset($_POST["registrerStudentKnapp"])) {
   if (!$Klassekode || !$brukernavn || !$etternavn || !$fornavn) {
     print ("B&aring;de Klassekode, brukernavn, etternavn og fornavn m&aring; fylles ut");
   } else {
-    include("db-tilkobling.php
+    include("db-tilkobling.php");
