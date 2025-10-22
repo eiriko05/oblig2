@@ -23,7 +23,7 @@ if (isset($_POST["slettKlasseKnapp"])) {
     } else {
         include("db-tilkobling.php");  // kobler til databasen
 
-        // sjekk om klassen finnes
+        // sjekk om Klassen finnes
         $sqlSetning = "SELECT * FROM Klasse WHERE klassekode='$klassekode';";
         $sqlResultat = mysqli_query($db, $sqlSetning) or die("Ikke mulig å hente data fra databasen");
         $antallRader = mysqli_num_rows($sqlResultat);
@@ -31,7 +31,7 @@ if (isset($_POST["slettKlasseKnapp"])) {
         if ($antallRader == 0) {
             print("Klasse finnes ikke");
         } else {
-            // slett klassen
+            // slett Klassen
             $sqlSetning = "DELETE FROM Klasse WHERE klassekode='$klassekode';";
             mysqli_query($db, $sqlSetning) or die("Ikke mulig å slette data i databasen");
 
