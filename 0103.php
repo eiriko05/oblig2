@@ -34,7 +34,8 @@ if (isset($_POST["slettKlasseKnapp"]))
        if ($antallRader == 0) 
  {
     print("Klasse finnes ikke");
- } else {
+ } else 
+ {
     // Sjekk om det finnes studenter i denne klassen
     $sqlSetning = "SELECT COUNT(*) AS antall FROM Student WHERE klassekode='$klassekode';";
     $resultat = mysqli_query($db, $sqlSetning);
